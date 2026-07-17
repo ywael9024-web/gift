@@ -626,6 +626,26 @@ section { position: relative; z-index: 1; }
   margin-top: 20px;
   animation: surge 0.55s 0.1s cubic-bezier(0.34,1.56,0.64,1) both;
 }
+.surprise-link {
+  display: none;
+  margin-top: 32px;
+  background: transparent;
+  border: 1.5px solid rgba(212,116,138,0.5);
+  color: var(--rose-soft);
+  padding: 12px 34px;
+  border-radius: 50px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 0.95rem; font-weight: 600;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.surprise-link:hover {
+  border-color: var(--rose-mid);
+  color: #fff;
+  background: rgba(184,66,90,0.15);
+  transform: scale(1.04);
+}
 .star-burst {
   position: absolute;
   pointer-events: none;
@@ -689,7 +709,7 @@ footer strong { color: var(--rose-mid); }
 <!-- Loader -->
 <div id="loader">
   <div class="loader-heart">🌹</div>
-  <div class="loader-text">جارٍ تحضير الهدية...</div>
+  <div class="loader-text">..لحظة يكتكوتى..</div>
   <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
 </div>
 
@@ -719,13 +739,14 @@ footer strong { color: var(--rose-mid); }
 
   <h1 class="hero-title">
     إليكِ يا
-    <span class="name">[اسمها] 🌹</span>
+    <span class="name">[أمنيتي ] 🌹</span>
   </h1>
 
   <p class="hero-subtitle">
-    هذه الصفحة ليست مجرد موقع — هي كل مرة جعلتِني أبتسم بلا سبب، محفوظة في مكان واحد.
+في البداية عاوز اقولك انك اكتر شخص انا بحبه فى حياتى بجد ، كلمة انا بعشقك قليلة على حبى ليكى بجد . ♥️
   </p>
-
+ " بحبك من " 
+ </p>
   <div class="counter-row">
     <div class="counter-box">
       <span class="counter-num" id="cnt-d">0</span>
@@ -766,24 +787,21 @@ footer strong { color: var(--rose-mid); }
       <!-- ← استبدل كل photo-placeholder بـ <img src="صورة.jpg" style="width:100%;height:100%;object-fit:cover;"> -->
       <div class="photo-card">
         <div class="photo-placeholder">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p>ضع صورتك هنا</p>
+        <img src="1.jpeg" style="width:300px; height:350px; object-fit:cover; border-radius:10px;">          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
         </div>
-        <div class="photo-caption-always">[اللحظة الأولى]</div>
       </div>
       <div class="photo-card">
         <div class="photo-placeholder">
+        <img src="2.jpeg" style="width:300px; height:380px; object-fit:cover; border-radius:10px;">          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p>ضع صورتك هنا</p>
         </div>
-        <div class="photo-caption-always">[ذكرى خاصة]</div>
+       
       </div>
       <div class="photo-card">
         <div class="photo-placeholder">
+        <img src="3.jpeg" style="width:300px; height: 380px;px; object-fit:cover; border-radius:10px;">          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p>ضع صورتك هنا</p>
         </div>
-        <div class="photo-caption-always">[المكان أو المناسبة]</div>
       </div>
     </div>
   </div>
@@ -793,19 +811,18 @@ footer strong { color: var(--rose-mid); }
 <section id="story">
   <div class="s-inner">
     <div class="reveal"><span class="s-tag">البداية الحقيقية</span></div>
-    <h2 class="s-title reveal" data-delay="1" style="text-align:center;">قصة تعارفنا</h2>
+    <h2 class="s-title reveal" data-delay="1" style="text-align:center;">قصتنا  </h2>
 
     <p class="story-intro reveal" data-delay="2">
-      كان يوم <em>[اكتب التاريخ أو الموسم]</em>،
-      حين التقى قلبان لم يكونا يعلمان أن العالم على وشك أن يتغير للأبد.
-      كنتُ <em>[صف المكان أو الموقف]</em>، وفجأة وجدتُ نفسي أبتسم لشخص جعل البسيط يبدو استثنائياً.
+      كان يوم <em>[يوم الاربع يوم 24/1/2024 ]</em>，
+لما شوفتك لاول مره فى حياتى كانت الساعة 5:33 فاكر اليوم دا كأن كان لسه امبارح ، لما شوفتك اول مره حسيت احساي غريب ، حسيت انى عاوز احضنك ، حسيت انى مستنيكى بقالى كتير ، يومها اكتر يوم بحبه فى حياتى بجد  
     </p>
 
     <div class="timeline reveal" data-delay="3">
       <div class="tl-item">
         <div class="tl-content tl-left">
-          <div class="tl-date">[التاريخ الأول]</div>
-          <div class="tl-text">[اكتب أول لقاء أو أول محادثة بينكما]</div>
+          <div class="tl-date">[24-1-2024-التاريخ الأول]</div>
+          <div class="tl-text">[ يومها لما قعدنا على السلم مكنتش متخيل ان كمان سنتين ونص هنبقى مع بعض لسه  ]</div>
         </div>
         <div class="tl-center"><div class="tl-dot">✦</div></div>
         <div class="tl-empty"></div>
@@ -814,14 +831,14 @@ footer strong { color: var(--rose-mid); }
         <div class="tl-empty"></div>
         <div class="tl-center"><div class="tl-dot">🌹</div></div>
         <div class="tl-content tl-right">
-          <div class="tl-date">[تاريخ مهم]</div>
-          <div class="tl-text">[لحظة شعرت فيها أن هذا شيء مختلف تماماً]</div>
+          <div class="tl-date">[2-2-2024اكتر تاريخ بحبه ]</div>
+          <div class="tl-text">[يومها الساعة 2 الفجر كانت اول مره اقولك انى بحبك، من يومها وانا حبى ليكى بيزيد ، يمكن بفضل اقولك كتير انى بحبك بس بجد مفيش مره قولتها او كتبتها مكنتش من قلبى بجد ]</div>
         </div>
       </div>
       <div class="tl-item">
         <div class="tl-content tl-left">
-          <div class="tl-date">[تاريخ آخر]</div>
-          <div class="tl-text">[ذكرى مشتركة جمعتكما]</div>
+          <div class="tl-date">[اكتر مره بحبها قعدت معاكى فيها 13-12-2025 ]</div>
+          <div class="tl-text">[ اليوم دا بحبه بكل تفاصيله بجد ، اولها انى حرفيا قعدت معاكى 20 دقيقة بالظبط ، بس كانو اكتر 20 دقيقة حلوين ف حياتى ، اول مره احضنك فيها ، يمكن الحضن مكملش 5 ثوانى بس دول كان اكتر 5 ثوانى انا كنت مرتاح فيهم بجد  ]</div>
         </div>
         <div class="tl-center"><div class="tl-dot">💫</div></div>
         <div class="tl-empty"></div>
@@ -830,8 +847,8 @@ footer strong { color: var(--rose-mid); }
         <div class="tl-empty"></div>
         <div class="tl-center"><div class="tl-dot">♥</div></div>
         <div class="tl-content tl-right">
-          <div class="tl-date">اليوم وما بعده</div>
-          <div class="tl-text">وما زال الفصل الأجمل يُكتب معاً...</div>
+          <div class="tl-date"> 16-7-2026  </div>
+          <div class="tl-text">  [خلصتى سنه من اصعب السنين فى حياتك سواء نفسيا او جسديا ، فخور بيكى و بكل التعب الى قدمتيه ف السنه دى ، هتفضلى ف نظرى اشطر بنوته ف الدنيا كلها وهفضل اقولك دكتورتى حتى لو دخلتى اى كلية تانية ، هفضل فخور بيكى طول عمرى ينن عيونى ]  </div>
         </div>
       </div>
     </div>
@@ -859,22 +876,23 @@ footer strong { color: var(--rose-mid); }
         <!-- Open -->
         <div class="letter-open" id="env-open">
           <div class="letter-paper-lines"></div>
-          <p><span class="letter-ph">[اسمها]</span>،</p>
+          <p><span class="letter-ph">[أمنيتى]</span>،</p>
           <p>
-            بعض الناس يدخلون حياتك فتشعر أن كل الضوضاء توقفت فجأة.
-            أنتِ كنتِ هكذا — هادئة، حقيقية، ودافئة كالمكان الذي تريد العودة إليه دائماً.
+           من يوم م دخلتى حياتى وحبيتك وانا نفسي اخليكى اكتر انسانة فرحانه ومبسوطة فى الدنيا كلها 
+           بحاول على قد م اقدر اكيد زعلتك ف يوم بس اكيد مش قصدى وانا عارف انى مش كامل بس بحاول اكون احسن انسان فى الدنيا عشانك __
+           حابب اقولك انى فخور بيكى ومتاكد انك عملتى الى عليكى ف السنه دى سواء كان مجموعك حلو او وحش هتفضلي ف نظرى اشطر واحدة ف الدنيا ان شاء الله هشوفك اجمل دكتورة فى الدنيا كلها 
+          
+            
           </p>
           <p>
-            أحبّ فيكِ <span class="letter-ph">[أضف صفة خاصة بها]</span>.<br>
-            أحبّ كيف <span class="letter-ph">[لحظة صغيرة لاحظتها فيها]</span>.<br>
-            أحبّ أن كل يوم معكِ يبدأ وكأنه أفضل ما حدث لي.
+            بحب فيكِ <span class="letter-ph">[بحب حاجات كتير اوى ، ضحكتك ، عيونك ، شفايفك ، لو فضلت اقول لبكرا مش هخلص بجد ]</span>.<br>
+           بحب منك صباح الخير يحبيبى ، بجد بتفتح نفسي على الحياة 
           </p>
           <p>
-            هذا الموقع ليس هدية كافية لكِ —
-            لكنه طريقتي لأقول: كل ما مررنا به أحفظه، وأقدّره، وأريدكِ دائماً بجانبي.
-          </p>
-          <span class="letter-sig">مع كل الحب، <span class="letter-ph">[اسمك]</span> 🌹</span>
-        </div>
+            كان نفسي اعملك هدية احسن من دى عشان خلصتى  —
+لكن انت شايفه الدنيا عندك صعب انى اجى او كدا __
+كدا كدا عاملك مفاجأة لما اشوفك ، بس لما اشوفك بقى 😂♥️          </p>
+          <span class="letter-sig">  بحبك اوى يا دكتورتى  <span class="letter-ph">❤</span></span>
 
       </div>
     </div>
@@ -888,7 +906,7 @@ footer strong { color: var(--rose-mid); }
     <h2 class="s-title reveal" data-delay="1">مفاجأة خاصة 🎁</h2>
     <div class="surprise-body">
       <p class="surprise-sub reveal" data-delay="2">
-        اضغطي على الزر — لأن بعض المشاعر لا يكفيها كلام عادي
+       اضغطي هنا يدكتورتى 
       </p>
       <button class="btn-glow reveal" data-delay="3" id="btn-surprise" onclick="doSurprise(event)">
         ✨ افتحي المفاجأة
@@ -896,6 +914,7 @@ footer strong { color: var(--rose-mid); }
       <div class="surprise-reveal" id="surprise-reveal">
         <p class="surprise-quote" id="surprise-quote"></p>
         <span class="surprise-hearts" id="surprise-hearts"></span>
+        <a href="https://vt.tiktok.com/ZSX5uUYbn/" target="_blank" rel="noopener noreferrer" class="surprise-link" id="surprise-link">🎥 اضغطي هنا لمشاهدة الفيديو</a>
       </div>
     </div>
   </div>
@@ -957,7 +976,7 @@ document.addEventListener('mousemove', e => {
 
 /* ── LIVE COUNTER ── */
 // ← غيّر هذا التاريخ لتاريخ بداية علاقتكما (YYYY, MM-1, DD)
-const START = new Date(2024, 0, 1, 0, 0, 0);
+const START = new Date(2024, 1, 0, 0, 2, 4);
 
 function tick() {
   const diff = Date.now() - START;
@@ -992,11 +1011,12 @@ function openLetter() {
 
 /* ── SURPRISE ── */
 const quotes = [
-  "أنتِ أجمل شيء حدث لي في حياتي كلها 🌹",
-  "لو أعيش ألف مرة، سأختارك في كل مرة ✨",
-  "معكِ البيت ليس مكاناً — معكِ البيت إحساس 🏡",
-  "شكراً لأنكِ موجودة... شكراً لأنكِ أنتِ 💫",
-  "أحبكِ بقدر ما يعجز الكلام عن الوصف ❤"
+  "مجاش في بالي قبل منك اني ممكن احب الحب دا🌹",
+  "لا حد بعدك يملى عيونى __ ولا حب غير حبك يرضينى 💖",
+  "لو الزمن اتعاد بيا الف مره _ هختارك كل مره ✨",
+  "كل يوم معاكِ بيكون أجمل من اليوم اللي قبله 💖",
+  "أنتِ أجمل صدفة حصلت في حياتي 🌸",
+  "   💝افتحى اللينك يا بنوتى   "
 ];
 const hearts = ['💖','🌹','💕','✨','🥀','💗','🌸','💝'];
 let qi = 0;
@@ -1006,8 +1026,10 @@ function doSurprise(evt) {
   const reveal  = document.getElementById('surprise-reveal');
   const quoteEl = document.getElementById('surprise-quote');
   const heartsEl= document.getElementById('surprise-hearts');
+  const linkEl  = document.getElementById('surprise-link');
 
-  quoteEl.textContent  = quotes[qi % quotes.length];
+  const currentIndex = qi % quotes.length;
+  quoteEl.textContent  = quotes[currentIndex];
   heartsEl.textContent = Array.from({length: 7}, () =>
     hearts[Math.floor(Math.random() * hearts.length)]
   ).join(' ');
@@ -1017,6 +1039,14 @@ function doSurprise(evt) {
   quoteEl.style.animation  = 'surge 0.5s cubic-bezier(0.34,1.56,0.64,1) both';
   heartsEl.style.animation = 'none'; void heartsEl.offsetWidth;
   heartsEl.style.animation = 'surge 0.55s 0.1s cubic-bezier(0.34,1.56,0.64,1) both';
+
+  if (currentIndex === quotes.length - 1) {
+    linkEl.style.display = 'inline-block';
+    linkEl.style.animation = 'none'; void linkEl.offsetWidth;
+    linkEl.style.animation = 'surge 0.55s 0.2s cubic-bezier(0.34,1.56,0.64,1) both';
+  } else {
+    linkEl.style.display = 'none';
+  }
 
   // star burst
   const section = document.getElementById('surprise');
