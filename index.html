@@ -984,8 +984,7 @@ function tick() {
   const m = Math.floor(diff / 60000) % 60;
   const h = Math.floor(diff / 3600000) % 24;
   const d = Math.floor(diff / 86400000);
-  document.getElementById('cnt-d').textContent = d.toLocaleString('en-US');
-  document.getElementById('cnt-h').textContent = String(h).padStart(2,'0');
+document.getElementById('cnt-d').textContent = String(d);  document.getElementById('cnt-h').textContent = String(h).padStart(2,'0');
   document.getElementById('cnt-m').textContent = String(m).padStart(2,'0');
   document.getElementById('cnt-s').textContent = String(s).padStart(2,'0');
 }
