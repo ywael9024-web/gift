@@ -69,10 +69,10 @@ body {
 }
 @keyframes heartbeat {
   0%, 100% { transform: scale(1); }
-  14%       { transform: scale(1.15); }
-  28%       { transform: scale(1); }
-  42%       { transform: scale(1.08); }
-  70%       { transform: scale(1); }
+  14%      { transform: scale(1.15); }
+  28%      { transform: scale(1); }
+  42%      { transform: scale(1.08); }
+  70%      { transform: scale(1); }
 }
 .loader-text {
   font-family: 'Amiri', serif;
@@ -193,7 +193,7 @@ nav {
 .hero-badge span { display: inline-block; animation: pulse-dot 2s infinite; }
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
-  50%       { opacity: 0.4; }
+  50%      { opacity: 0.4; }
 }
 
 .hero-title {
@@ -217,8 +217,16 @@ nav {
   color: var(--ink-soft);
   max-width: 480px;
   line-height: 1.75;
-  margin-bottom: 52px;
+  margin-bottom: 20px;
   opacity: 0; animation: rise 0.9s 2.7s cubic-bezier(0.16,1,0.3,1) forwards;
+}
+
+.hero-love {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: var(--rose);
+  font-family: 'Amiri', serif;
+  margin-bottom: 52px;
+  opacity: 0; animation: rise 0.9s 2.8s cubic-bezier(0.16,1,0.3,1) forwards;
 }
 
 /* Counter */
@@ -593,6 +601,7 @@ section { position: relative; z-index: 1; }
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 .btn-glow::before {
   content: '';
@@ -600,6 +609,7 @@ section { position: relative; z-index: 1; }
   background: radial-gradient(circle at center, rgba(184,66,90,0.2), transparent 70%);
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: -1;
 }
 .btn-glow:hover {
   border-color: var(--rose-mid);
@@ -652,6 +662,7 @@ section { position: relative; z-index: 1; }
   pointer-events: none;
   animation: star-fly 1s ease forwards;
   font-size: 20px;
+  z-index: 9999;
 }
 @keyframes star-fly {
   0%   { transform: translate(0,0) scale(1); opacity: 1; }
@@ -690,8 +701,10 @@ footer strong { color: var(--rose-mid); }
 @media (max-width: 680px) {
   nav { padding: 0 4vw; }
   .nav-links { gap: 16px; }
-.photo-masonry { grid-template-columns: 1fr 1fr; width: 100%; }  .photo-card:nth-child(2) { margin-top: 0; }
-.photo-card:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 4/3; }  .timeline::before { right: 14px; }
+  .photo-masonry { grid-template-columns: 1fr 1fr; width: 100%; }  
+  .photo-card:nth-child(2) { margin-top: 0; }
+  .photo-card:nth-child(3) { grid-column: 1 / -1; aspect-ratio: 4/3; }  
+  .timeline::before { right: 14px; }
   .tl-item { grid-template-columns: 1fr 28px; }
   .tl-item:nth-child(odd) .tl-empty,
   .tl-item:nth-child(even) .tl-empty { display: none; }
@@ -744,8 +757,8 @@ footer strong { color: var(--rose-mid); }
   <p class="hero-subtitle">
 في البداية عاوز اقولك انك اكتر شخص انا بحبه فى حياتى بجد ، كلمة انا بعشقك قليلة على حبى ليكى بجد . ♥️
   </p>
- " بحبك من " 
- </p>
+  <p class="hero-love">" بحبك من "</p>
+  
   <div class="counter-row">
     <div class="counter-box">
       <span class="counter-num" id="cnt-d">0</span>
@@ -757,7 +770,7 @@ footer strong { color: var(--rose-mid); }
     </div>
     <div class="counter-box">
       <span class="counter-num" id="cnt-m">0</span>
-      <span class="counter-lbl">تتتت</span>
+      <span class="counter-lbl">دقيقة</span>
     </div>
     <div class="counter-box">
       <span class="counter-num" id="cnt-s">0</span>
@@ -783,18 +796,17 @@ footer strong { color: var(--rose-mid); }
     <h2 class="s-title reveal" data-delay="1">ذكرياتنا معاً</h2>
 
     <div class="photo-masonry reveal" data-delay="2">
-      <!-- ← استبدل كل photo-placeholder بـ <img src="صورة.jpg" style="width:100%;height:100%;object-fit:cover;"> -->
-    <div class="photo-masonry reveal" data-delay="2">
-  <div class="photo-card">
-    <img src="1.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;">
+      <div class="photo-card">
+        <img src="1.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Photo 1">
+      </div>
+      <div class="photo-card">
+        <img src="2.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Photo 2">
+      </div>
+      <div class="photo-card">
+        <img src="3.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;" alt="Photo 3">
+      </div>
+    </div>
   </div>
-  <div class="photo-card">
-    <img src="2.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;">
-  </div>
-  <div class="photo-card">
-    <img src="3.jpeg" style="width:100%; height:100%; object-fit:cover; display:block;">
-  </div>
-</div>
 </section>
 
 <!-- ── STORY ── -->
@@ -804,7 +816,7 @@ footer strong { color: var(--rose-mid); }
     <h2 class="s-title reveal" data-delay="1" style="text-align:center;">قصتنا </h2>
 
     <p class="story-intro reveal" data-delay="2">
-      كان يوم <em>[يوم الاربع يوم 24/1/2024 ]</em>，
+      كان يوم <em>[يوم الاربع يوم 24/1/2024 ]</em>،
 لما شوفتك لاول مره فى حياتى كانت الساعة 5:33 فاكر اليوم دا كأن كان لسه امبارح ، لما شوفتك اول مره حسيت احساي غريب ، حسيت انى عاوز احضنك ، حسيت انى مستنيكى بقالى كتير ، يومها اكتر يوم بحبه فى حياتى بجد  
     </p>
 
@@ -871,8 +883,6 @@ footer strong { color: var(--rose-mid); }
            من يوم م دخلتى حياتى وحبيتك وانا نفسي اخليكى اكتر انسانة فرحانه ومبسوطة فى الدنيا كلها 
            بحاول على قد م اقدر اكيد زعلتك ف يوم بس اكيد مش قصدى وانا عارف انى مش كامل بس بحاول اكون احسن انسان فى الدنيا عشانك __
            حابب اقولك انى فخور بيكى ومتاكد انك عملتى الى عليكى ف السنه دى سواء كان مجموعك حلو او وحش هتفضلي ف نظرى اشطر واحدة ف الدنيا ان شاء الله هشوفك اجمل دكتورة فى الدنيا كلها 
-          
-            
           </p>
           <p>
             بحب فيكِ <span class="letter-ph">[بحب حاجات كتير اوى ، ضحكتك ، عيونك ، شفايفك ، لو فضلت اقول لبكرا مش هخلص بجد ]</span>.<br>
@@ -884,6 +894,7 @@ footer strong { color: var(--rose-mid); }
 كدا كدا عاملك مفاجأة لما اشوفك ، بس لما اشوفك بقى 😂♥️          </p>
           <span class="letter-sig">  بحبك اوى يا دكتورتى  <span class="letter-ph">❤</span></span>
 
+        </div>
       </div>
     </div>
   </div>
@@ -896,7 +907,7 @@ footer strong { color: var(--rose-mid); }
     <h2 class="s-title reveal" data-delay="1">مفاجأة خاصة 🎁</h2>
     <div class="surprise-body">
       <p class="surprise-sub reveal" data-delay="2">
-       اضغطي هنا يدكتورتى 
+        اضغطي هنا يدكتورتى 
       </p>
       <button class="btn-glow reveal" data-delay="3" id="btn-surprise" onclick="doSurprise(event)">
         ✨ افتحي المفاجأة
@@ -958,15 +969,14 @@ document.addEventListener('mousemove', e => {
     const dur = 7 + Math.random() * 9;
     const delay = Math.random() * 12;
     wrap.style.cssText = `left:${Math.random()*100}%;animation-duration:${dur}s;animation-delay:${delay}s;`;
-    // SVG petal shape
     wrap.innerHTML = `<svg width="${size}" height="${size}" viewBox="0 0 20 20"><path d="M10 2 Q16 8 10 18 Q4 8 10 2Z" fill="${color}" opacity="0.75"/></svg>`;
     layer.appendChild(wrap);
   }
 })();
 
 /* ── LIVE COUNTER ── */
-// ← غيّر هذا التاريخ لتاريخ بداية علاقتكما (YYYY, MM-1, DD)
-const START = new Date(2024, 1, 0, 0, 2, 4);
+// التاريخ مضبوط على: 24 يناير 2024 الساعة 5:33 مساءً (17:33)
+const START = new Date(2024, 0, 24, 17, 33, 0);
 
 function tick() {
   const diff = Date.now() - START;
@@ -974,7 +984,9 @@ function tick() {
   const m = Math.floor(diff / 60000) % 60;
   const h = Math.floor(diff / 3600000) % 24;
   const d = Math.floor(diff / 86400000);
-document.getElementById('cnt-d').textContent = String(d);  document.getElementById('cnt-h').textContent = String(h).padStart(2,'0');
+  
+  document.getElementById('cnt-d').textContent = String(d);  
+  document.getElementById('cnt-h').textContent = String(h).padStart(2,'0');
   document.getElementById('cnt-m').textContent = String(m).padStart(2,'0');
   document.getElementById('cnt-s').textContent = String(s).padStart(2,'0');
 }
@@ -1038,33 +1050,36 @@ function doSurprise(evt) {
   }
 
   // star burst
-  const section = document.getElementById('surprise');
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < 15; i++) {
     const star = document.createElement('div');
     star.className = 'star-burst';
-    const angle = (Math.PI * 2 / 12) * i;
-    const dist  = 60 + Math.random() * 80;
-    star.style.cssText = [
-      `left:${evt.clientX - section.getBoundingClientRect().left}px`,
-      `top:${evt.clientY - section.getBoundingClientRect().top}px`,
-      `--tx:${Math.cos(angle)*dist}px`,
-      `--ty:${Math.sin(angle)*dist}px`
-    ].join(';');
     star.textContent = hearts[Math.floor(Math.random() * hearts.length)];
-    section.appendChild(star);
+    star.style.left = (evt.clientX || window.innerWidth / 2) + 'px';
+    star.style.top = (evt.clientY || window.innerHeight / 2) + 'px';
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 50 + Math.random() * 120;
+    star.style.setProperty('--tx', Math.cos(angle) * dist + 'px');
+    star.style.setProperty('--ty', Math.sin(angle) * dist + 'px');
+    document.body.appendChild(star);
     setTimeout(() => star.remove(), 1000);
   }
-
   qi++;
-  btn.textContent = qi < quotes.length ? '💌 رسالة أخرى' : '🔁 من البداية';
-  if (qi >= quotes.length) qi = 0;
 }
 
-/* ── SCROLL REVEAL ── */
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+/* ── SCROLL REVEAL OBSERVER ── */
+document.addEventListener("DOMContentLoaded", function() {
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  
+  revealElements.forEach(el => revealObserver.observe(el));
+});
 </script>
 </body>
 </html>
